@@ -1,0 +1,35 @@
+<Window xmlns="https://github.com/avaloniaui"
+		MinHeight="450"
+		MinWidth="450"
+		Height="450"
+		Width="450"
+		MaxWidth="450"
+		MaxHeight="450"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:AvaloniaApplication1.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+
+        x:Class="AvaloniaApplication1.Views.MainWindow"
+        Icon="/Assets/logo.ico"
+        Title="017 Извеков Иван">
+
+	<Grid ColumnDefinitions="*,*,*,*" RowDefinitions="115,110,110,110" HorizontalAlignment="Center" VerticalAlignment="Center" >
+
+		<TextBox Name="inputPanel" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" IsUndoEnabled="False" Focusable="False" Background="#fadaa7"  FontSize="36" Text="{Binding Output}" ></TextBox>
+		<Button CommandParameter="I" Name="I" Height="110" Width="110" Grid.Row="1" Grid.Column="0" Background="#cccccc"  FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding OnClickValue}" >I</Button>
+		<Button CommandParameter="L" Name="L" Height="110" Width="110" Grid.Row="1" Grid.Column="1" Background="#cccccc"  FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding OnClickValue}" >L</Button>
+		<Button CommandParameter="M" Name="M" Height="110" Width="110" Grid.Row="1" Grid.Column="2" Background="#cccccc"  FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding OnClickValue}" >M</Button>
+		<Button CommandParameter="*" Name="umnojit" Height="110" Width="110" Grid.Row="1" Grid.Column="3" Background="#ffa51f" Foreground="#434345"  FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding OnClickOper}" >*</Button>
+		<Button CommandParameter="V" Name="V" Height="110" Width="110" Grid.Row="2" Grid.Column="0" Background="#cccccc"  FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding OnClickValue}" >V</Button>
+		<Button CommandParameter="C" Name="C" Height="110" Width="110" Grid.Row="2" Grid.Column="1" Background="#cccccc"  FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding OnClickValue}" >C</Button>
+		<Button CommandParameter="+" Name="plus" Height="110" Width="110" Grid.Row="2" Grid.Column="2" Background="#ffa51f" Foreground="#434345"  FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding OnClickOper}" >+</Button>
+		<Button CommandParameter="/" Name="delit" Height="110" Width="110" Grid.Row="2" Grid.Column="3" Background="#ffa51f" Foreground="#434345"  FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding OnClickOper}" >/</Button>
+		<Button CommandParameter="X" Name="X" Height="110" Width="110" Grid.Row="3" Grid.Column="0" Background="#cccccc"  FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding OnClickValue}" >X</Button>
+		<Button CommandParameter="D" Name="D" Height="110" Width="110" Grid.Row="3" Grid.Column="1" Background="#cccccc"  FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding OnClickValue}" >D</Button>
+		<Button CommandParameter="-" Name="minus" Height="110" Width="110" Grid.Row="3" Grid.Column="2" Background="#ffa51f" Foreground="#434345"  FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding OnClickOper}" >-</Button>
+		<Button CommandParameter="=" Name="rovno" Height="110" Width="110" Grid.Row="3" Grid.Column="3" Background="#FF8100" Foreground="#434345"  FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding OnClickOper}" >=</Button>
+		
+	</Grid>
+	
+</Window>
